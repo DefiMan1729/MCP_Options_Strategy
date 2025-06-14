@@ -85,3 +85,37 @@ def put_option(strike: float, premium: float) -> dict:
         "max_profit": strike - premium,  # Profit is capped at the strike price minus the premium
         "max_loss": premium               # Limited loss equal to the premium
     }
+```
+
+## Calling MCP tools from Claude Desktop
+
+```json
+{
+  "mcpServers": {
+    "Demo": {
+      "command": "/Users/arkaroychowdhury/.local/bin/uv",
+      "args": [
+        "run",
+        "--with",
+        "mcp[cli]",
+        "mcp",
+        "run",
+        "/Users/arkaroychowdhury/Desktop/2025-Portfolio/Code/MCP/mcp-server-demo/server.py"
+      ]
+    },
+    "DemoOptions": {
+      "command": "/Users/arkaroychowdhury/.local/bin/uv",
+      "args": [
+        "run",
+        "--with",
+        "mcp[cli]",
+        "mcp",
+        "run",
+        "/Users/arkaroychowdhury/Desktop/2025-Portfolio/Code/MCP/mcp-server-demo/server3.py"
+      ]
+    }
+  }
+}
+```
+Screenshot from Claude desktop
+<img width="766" alt="Screenshot 2025-06-14 at 5 43 31 PM" src="https://github.com/user-attachments/assets/1192e51c-31e6-4261-867d-6913ca3806cc" />
